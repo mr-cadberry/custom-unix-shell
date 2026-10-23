@@ -9,10 +9,14 @@ int main() {
   while (true) {
     // get input from user
     std::cout << "$ ";
-    std::string command; 
-    std::getline(std::cin, command); 
-    //output error message if command is not found
-    std::cout << command << ": command not found" << std::endl;
+    std::string command;
+    std::getline(std::cin, command);
+    if (command == "exit") {
+      break;
+    } else {
+      //output error message if command is not found
+      std::cout << command << ": command not found" << std::endl;
+    }
   }
 
 }
